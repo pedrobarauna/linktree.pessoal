@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg,
+            #a47451 0%,
+            #9c9881 16%,
+            #73a09d 33%,
+            #3b899a 50%,
+            #095b79 66%,
+            #002847 83%,
+            #000116 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+
+.content_box {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+}
+
+
+/* PERFIL */
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+
+.perfil img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 15px;
+}
+
+
+.perfil h1 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+
+.perfil p {
+    font-size: 0.85rem;
+    color: #fff;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* LINKS */
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+.links-container article {
+    width: 100%;
+}
+
+.links-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+
+.links-container a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+    border-color: #fff;
+}
+
+.links-container i {
+    font-size: 1.1rem;
+}
+
+/* REDES SOCIAIS */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.3rem;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+
+.social-links a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+
+/* RODAPÉ */
+footer {
+    margin-top: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+footer p {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+}
