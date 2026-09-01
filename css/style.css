@@ -339,3 +339,64 @@ footer p {
     border-color: #ffffff;
     transform: translateY(-2px);
 }
+
+/* =========================================
+   BOTÃO DE TEMA (DARK/LIGHT)
+========================================= */
+.theme-btn {
+    position: absolute; /* Fixa no topo */
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000; /* Garante que fique acima de tudo */
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* =========================================
+   MODO CLARO (LIGHT MODE)
+========================================= */
+/* Quando o body tiver essa classe, ele substitui as cores originais */
+body.light-mode {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* Fundo claro */
+    color: #333333; /* Texto escuro */
+}
+
+/* Ajuste das cores do botão de tema no Modo Claro */
+body.light-mode .theme-btn {
+    color: #333333;
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .theme-btn:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* Se você usar links/botões transparentes com borda branca, inverta-os aqui */
+body.light-mode a, 
+body.light-mode .btn-voltar,
+body.light-mode .icone-aviso,
+body.light-mode h1,
+body.light-mode p {
+    color: #333333;
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+body.light-mode .btn-voltar:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
