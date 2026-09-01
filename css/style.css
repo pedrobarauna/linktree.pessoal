@@ -117,7 +117,7 @@ main {
     font-size: 1.1rem;
 }
 
-/* REDES SOCIAIS */
+/* REDES SOCIAIS no RODAPÉ */
 .social-links {
     display: flex;
     justify-content: center;
@@ -163,6 +163,8 @@ footer p {
 ========================================= */
 
 /* Caixa principal com efeito Glassmorphism */
+/* Garante respiro nas laterais no mobile */
+
 .sobre-container {
     width: 100%;
     max-width: 600px;
@@ -173,7 +175,6 @@ footer p {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     margin: 30px 20px;
-    /* Garante respiro nas laterais no mobile */
 }
 
 /* Cabeçalho do Sobre Mim */
@@ -290,7 +291,6 @@ footer p {
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    /* Centraliza horizontalmente */
     padding: 2rem;
 }
 

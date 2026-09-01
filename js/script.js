@@ -1,41 +1,41 @@
-// Seleciona o botão de tema, o ícone e a tag body
-const themeToggleBtn = document.getElementById('theme-toggle');
+// 1. CRIA O BOTÃO DE TEMA VIA JAVASCRIPT AUTOMATICAMENTE
+const themeToggleBtn = document.createElement('button');
+themeToggleBtn.id = 'theme-toggle';
+themeToggleBtn.className = 'theme-btn';
+themeToggleBtn.innerHTML = '<i class="fa-solid fa-sun" id="theme-icon"></i>';
+document.body.appendChild(themeToggleBtn);
+
+// 2. LÓGICA DO TEMA (DARK/LIGHT)
 const themeIcon = document.getElementById('theme-icon');
 const body = document.body;
 
 // Verifica no navegador se o usuário já escolheu um tema antes
 const currentTheme = localStorage.getItem('theme');
 
-// Se a preferência salva for 'light', aplica o tema claro e muda o ícone para a lua
 if (currentTheme === 'light') {
     body.classList.add('light-mode');
     themeIcon.classList.replace('fa-sun', 'fa-moon');
 }
 
-// O que acontece quando clica no botão
 themeToggleBtn.addEventListener('click', () => {
-    // Adiciona ou remove a classe 'light-mode' do body
     body.classList.toggle('light-mode');
 
-    // Se a classe 'light-mode' estiver ativa agora...
     if (body.classList.contains('light-mode')) {
-        localStorage.setItem('theme', 'light'); // Salva a preferência
-        themeIcon.classList.replace('fa-sun', 'fa-moon'); // Troca o ícone para Lua
+        localStorage.setItem('theme', 'light');
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
     } else {
-        localStorage.setItem('theme', 'dark'); // Salva a preferência
-        themeIcon.classList.replace('fa-moon', 'fa-sun'); // Troca o ícone para Sol
+        localStorage.setItem('theme', 'dark');
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
     }
 });
 
-// Aguarda a página carregar completamente
+// 3. ANIMAÇÕES DE ENTRADA (STAGGERED ANIMATIONS)
 window.addEventListener('load', () => {
-    // Seleciona todos os elementos que receberam a classe 'fade-in'
     const elementosAnimados = document.querySelectorAll('.fade-in');
-
-    // Aplica a classe 'show' um por um com atraso progressivo
+    
     elementosAnimados.forEach((elemento, index) => {
         setTimeout(() => {
             elemento.classList.add('show');
-        }, index * 150); // Multiplica 150ms pelo índice do elemento
+        }, index * 150);
     });
 });
