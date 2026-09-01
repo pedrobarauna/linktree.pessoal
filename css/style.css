@@ -172,7 +172,8 @@ footer p {
     padding: 30px 20px;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    margin: 30px 20px; /* Garante respiro nas laterais no mobile */
+    margin: 30px 20px;
+    /* Garante respiro nas laterais no mobile */
 }
 
 /* Cabeçalho do Sobre Mim */
@@ -288,7 +289,8 @@ footer p {
     max-width: 600px;
     width: 100%;
     text-align: center;
-    margin: 0 auto; /* Centraliza horizontalmente */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
     padding: 2rem;
 }
 
@@ -344,7 +346,8 @@ footer p {
    BOTÃO DE TEMA (DARK/LIGHT)
 ========================================= */
 .theme-btn {
-    position: absolute; /* Fixa no topo */
+    position: absolute;
+    /* Fixa no topo */
     top: 20px;
     right: 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -359,7 +362,8 @@ footer p {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    z-index: 1000; /* Garante que fique acima de tudo */
+    z-index: 1000;
+    /* Garante que fique acima de tudo */
 }
 
 .theme-btn:hover {
@@ -372,8 +376,10 @@ footer p {
 ========================================= */
 /* Quando o body tiver essa classe, ele substitui as cores originais */
 body.light-mode {
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* Fundo claro */
-    color: #333333; /* Texto escuro */
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    /* Fundo claro */
+    color: #333333;
+    /* Texto escuro */
 }
 
 /* Ajuste das cores do botão de tema no Modo Claro */
@@ -388,7 +394,7 @@ body.light-mode .theme-btn:hover {
 }
 
 /* Se você usar links/botões transparentes com borda branca, inverta-os aqui */
-body.light-mode a, 
+body.light-mode a,
 body.light-mode .btn-voltar,
 body.light-mode .icone-aviso,
 body.light-mode h1,
@@ -399,4 +405,20 @@ body.light-mode p {
 
 body.light-mode .btn-voltar:hover {
     background: rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================
+   ANIMAÇÕES DE ENTRADA (STAGGERED)
+========================================= */
+/* Estado inicial: invisível e 30px mais para baixo */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado final: totalmente visível e na posição original */
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }

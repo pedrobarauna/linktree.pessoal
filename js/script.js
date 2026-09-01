@@ -26,3 +26,16 @@ themeToggleBtn.addEventListener('click', () => {
         themeIcon.classList.replace('fa-moon', 'fa-sun'); // Troca o ícone para Sol
     }
 });
+
+// Aguarda a página carregar completamente
+window.addEventListener('load', () => {
+    // Seleciona todos os elementos que receberam a classe 'fade-in'
+    const elementosAnimados = document.querySelectorAll('.fade-in');
+
+    // Aplica a classe 'show' um por um com atraso progressivo
+    elementosAnimados.forEach((elemento, index) => {
+        setTimeout(() => {
+            elemento.classList.add('show');
+        }, index * 150); // Multiplica 150ms pelo índice do elemento
+    });
+});
