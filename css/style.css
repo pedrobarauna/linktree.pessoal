@@ -275,3 +275,67 @@ footer p {
     transform: translateY(-3px);
     border-color: #fff;
 }
+
+/* =========================================
+   ESTILOS DA PÁGINA EM CONSTRUÇÃO
+========================================= */
+
+/* Container Principal */
+.aviso-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 2rem;
+}
+
+/* Ícone de Construção/Aviso */
+.icone-aviso {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Textos */
+.aviso-container h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.aviso-container p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+}
+
+/* Botão de Voltar */
+.btn-voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+}
